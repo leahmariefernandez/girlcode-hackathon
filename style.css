@@ -51,6 +51,65 @@ header a:hover{
 	margin: 0 auto;
 }
 
+\\ search bar
+.search-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.parent-container {
+	display: grid;
+	place-items: center;
+}
+
+
+form {
+	display: flex;
+	align-items: center;
+	background-color: #2b2b2b;
+	padding: 20px;
+	border-radius: 25px;
+	width: 20cm;
+}
+
+h2 {
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+input[type=search] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 25px;
+	font-size: 18px;
+	transition: background-color 0.3s ease;
+	color: #fff;
+	background-color: #2b2b2b;
+}
+
+input[type=search]:hover {
+	background-color: #f2f2f2;
+}
+
+button[type=submit] {
+	width: 80px;
+	height: 50px;
+	background-color: #fff;
+	color: #fff;
+	border: none;
+	border-radius: 25px;
+	cursor: pointer;
+	font-size: 18px;
+	text-decoration-color: #000;
+}
+
+
+
 \\ clothing preview
 .container {
 	display: flex;
@@ -106,7 +165,7 @@ header a:hover{
 footer {
 	background-color: #000;
 	padding: 50px 0;
-	text-align: center;
+	
 	color: #fff;
 }
 
@@ -123,7 +182,6 @@ footer {
 	width: 100%;
 	background-color: #000;
 	padding: 50px 0;
-	text-align: center;
 	color: #fff;
 
 }
@@ -131,7 +189,7 @@ footer {
 
 .container{
 	margin-top:100px;
-	position: relative;
+	
 }
 
 
@@ -143,7 +201,7 @@ footer input[type="email"] {
 	color: #fff;
 	background-color: #fff;
 	width: 70%;
-	text-align: center;
+
 }
 
 footer button[type="submit"] {
@@ -154,7 +212,7 @@ footer button[type="submit"] {
 	border-radius: 4px;
 	cursor: pointer;
 	width: 20%;
-	text-align: center;
+	
 }
 
 
