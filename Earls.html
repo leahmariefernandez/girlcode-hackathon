@@ -31,97 +31,9 @@
 	</header>
 
 	<div class="header-section">
-		<h1 class="main-header" style="font-family: 'Open Sans', sans-serif; font-size: 36px; font-weight: 700;">Personalized Outfits Wherever You Go</h1>
-		<p class="sub-header" style="font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: 400;">Aritizia's NEW personalization feature that 
-			helps you say fashionable whether they are going for a workout at the gym or attending a fancy cocktail party tonight. Whatever it is, we've got 
-			you covered!</p>
+		<h1 class="main-header" style="font-family: 'Open Sans', sans-serif; font-size: 36px; font-weight: 700;">Here are some items that we recommend for EARLS</h1>
+		<p class="sub-header" style="font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: 400;">   </p>
 	</div>
-
-
-
-	<form id="search-form" action="search-results.html">
-		<div class="parent-container"> 
-			<div class="search-container">
-				
-				<form>
-						<input type="search" id="search" placeholder="Search For Your Location Here">
-						<button type="submit"></button>
-				</form>
-			</div>
-		</div>
-	</form>
-
-	<script>
-		var searchForm = document.getElementById("search-form");
-
-		searchForm.addEventListener("submit", function(event) {
-				event.preventDefault();
-				var searchTerm = document.getElementById("search").value;
-				window.location.href = searchTerm + ".html";
-		});
-	</script>
-
-<title>Simple Map</title>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-<script type="module" src="./index.js"></script>
-
-<meta name="viewport" content="initial-scale=1.0">
-<meta charset="utf-8">
-<style>
-/* Always set the map height explicitly to define the size of the div
-* element that contains the map. */
-#map {
-height: 100%;
-}
-/* Optional: Makes the sample page fill the window. */
-html, body {
-height: 100%;
-margin: 0;
-padding: 0;
-}
-</style>
-</head>
-<body>
-<div id="map"></div>
-<script>
-var map;
-function initMap() {
-const ubc = { lat: 49.2606, lng: -123.2460 };
-const stanleypark = {lat: 49.3043 , lng: -123.1443};
-const kistilanobeach = {lat: 49.2754 , lng: -123.1535};
-const earls = {lat: 49.2758, lng:-123.1206 };
-map = new google.maps.Map(document.getElementById('map'), {
-	center: {lat: 49.2684, lng: -123.1683},
-	zoom: 13
-
-	
-})
-const marker1 = new google.maps.Marker({
-		position: ubc,
-		map: map,
-	})
-	const marker2 = new google.maps.Marker({
-		position: stanleypark,
-		map: map,
-	})
-	const marker3 = new google.maps.Marker({
-		position: kistilanobeach,
-		map: map,
-	})
-	const marker4 = new google.maps.Marker({
-		position: earls,
-		map: map,
-	})
-	;
-}
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYB7oUkhLrsezb3yL9X9jezGwUXH1g_bs&callback=initMap"
-async defer></script>
-
-	
-<div class="reco">
-  <h1>Check these out too!</h1>
-</div>
 
 	
 	<div class="container">
