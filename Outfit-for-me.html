@@ -32,43 +32,127 @@
 
 	<div class="header-section">
 		<h1 class="main-header" style="font-family: 'Open Sans', sans-serif; font-size: 36px; font-weight: 700;">Personalized Outfits Wherever You Go</h1>
-		<p class="sub-header" style="font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: 400;">Aritizia's New Personalization Feature that let's clients say fashionable whether they are going for a workout at the gym or attending a cocktail party tonight. We've got you covered!</p>
+		<p class="sub-header" style="font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: 400;">Aritizia's NEW personalization feature that 
+			helps you say fashionable whether they are going for a workout at the gym or attending a fancy cocktail party tonight. Whatever it is, we've got 
+			you covered!</p>
 	</div>
 
-	<div class="near-you-section">
-		<h1 class="recommendation-header" style="font-family: 'Open Sans', sans-serif; font-size: 36px; font-weight: 700;"> Places to visit near you </h1>
-		<div class="container">
-			<div class="row">
-				<div class="col-6 col-md-3">
-					<div class="clothing-preview">
-						<img src="Earls.png" alt="Clothing 1">
-						<p style ="color:white">Earls Kitchen and Bar</p>
-					</div>
+
+	<form id="search-form" action="search-results.html">
+		<div class="parent-container"> 
+			<div class="search-container">
+				
+				<form>
+						<input type="search" id="search" placeholder="Search For Your Location Here">
+						<button type="submit"></button>
+				</form>
+			</div>
+		</div>
+	</form>
+
+	<script>
+		var searchForm = document.getElementById("search-form");
+
+		searchForm.addEventListener("submit", function(event) {
+				event.preventDefault();
+				var searchTerm = document.getElementById("search").value;
+				window.location.href = searchTerm + ".html";
+		});
+	</script>
+
+<title>Simple Map</title>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script type="module" src="./index.js"></script>
+
+<meta name="viewport" content="initial-scale=1.0">
+<meta charset="utf-8">
+<style>
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+var map;
+function initMap() {
+const ubc = { lat: 49.2606, lng: -123.2460 };
+const stanleypark = {lat: 49.3043 , lng: -123.1443};
+const kistilanobeach = {lat: 49.2754 , lng: -123.1535};
+const earls = {lat: 49.2758, lng:-123.1206 };
+map = new google.maps.Map(document.getElementById('map'), {
+	center: {lat: 49.2684, lng: -123.1683},
+	zoom: 13
+
+	
+})
+const marker1 = new google.maps.Marker({
+		position: ubc,
+		map: map,
+	})
+	const marker2 = new google.maps.Marker({
+		position: stanleypark,
+		map: map,
+	})
+	const marker3 = new google.maps.Marker({
+		position: kistilanobeach,
+		map: map,
+	})
+	const marker4 = new google.maps.Marker({
+		position: earls,
+		map: map,
+	})
+	;
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYB7oUkhLrsezb3yL9X9jezGwUXH1g_bs&callback=initMap"
+async defer></script>
+
+	
+<div class="near-you-section">
+	<h1 class="recommendation-header" style="font-family: 'Open Sans', sans-serif; font-size: 36px; font-weight: 700;"> Check out these places near you! </h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-6 col-md-3">
+				<div class="clothing-preview">
+					<img src="Earls.png" alt="Clothing 1">
+					<p style ="color:white">Earls Kitchen and Bar</p>
 				</div>
-				<div class="col-6 col-md-3">
-					<div class="clothing-preview">
-						<img src="Eatery.jpeg" alt="Clothing 2">
-						<p style ="color:white">The Eatery</p>
-					</div>
+			</div>
+			<div class="col-6 col-md-3">
+				<div class="clothing-preview">
+					<img src="Eatery.jpeg" alt="Clothing 2">
+					<p style ="color:white">The Eatery</p>
 				</div>
-				<div class="col-6 col-md-3">
-					<div class="clothing-preview">
-						<img src="kits-beach.jpeg" alt="Clothing 3">
-						<p style ="color:white">Kitsilano Beach</p>
-					</div>
+			</div>
+			<div class="col-6 col-md-3">
+				<div class="clothing-preview">
+					<img src="kits-beach.jpeg" alt="Clothing 3">
+					<p style ="color:white">Kitsilano Beach</p>
 				</div>
-				<div class="col-6 col-md-3">
-					<div class="clothing-preview">
-						<img src="Stanley-park.jpeg" alt="Clothing 4">
-						<p style ="color:white">Stanley Park</p>
-					</div>
+			</div>
+			<div class="col-6 col-md-3">
+				<div class="clothing-preview">
+					<img src="Stanley-park.jpeg" alt="Clothing 4">
+					<p style ="color:white">Stanley Park</p>
 				</div>
 			</div>
 		</div>
-		<hr>
-
 	</div>
+	<hr>
 
+</div>
+
+	
 	<div class="container">
 		<div class="row">
 			<div class="col-6 col-md-3">
@@ -122,25 +206,6 @@
 		</div>
 	</div>
 	
-
-
-
-	
-			
-
-			
-
-
-
-	<div class="right-nav">
-		<form action="/search" method="get">
-				<input type="text" placeholder="Search">
-				<button type="submit">Search</button>
-		</form>
-		<a href="/en/cart" class="cart-icon">
-				<img src="cart.png" alt="Cart">
-		</a>
-	</div>
 
 	<footer>
 		<div class="container">
