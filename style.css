@@ -42,6 +42,7 @@ header a:hover{
 .main-header {
 	color: #333;
 	margin-bottom: 20px;
+	text-align: center;
 }
 
 .sub-header {
