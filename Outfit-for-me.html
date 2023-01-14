@@ -32,10 +32,41 @@
 
 	<div class="header-section">
 		<h1 class="main-header" style="font-family: 'Open Sans', sans-serif; font-size: 36px; font-weight: 700;">Personalized Outfits Wherever You Go</h1>
-		<p class="sub-header" style="font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: 400;">Aritizia's New Personalization Feature that let's clients say fashionable whether they are going for a workout at the gym or attending a cocktail party tonight. We've got you covered!</p>
+		<p class="sub-header" style="font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: 400;">Aritizia's NEW personalization feature that 
+			helps you say fashionable whether they are going for a workout at the gym or attending a fancy cocktail party tonight. Whatever it is, we've got 
+			you covered!</p>
 	</div>
 
 
+
+	<form id="search-form" action="search-results.html">
+		<div class="parent-container"> 
+			<div class="search-container">
+				
+				<form>
+						<input type="search" id="search" placeholder="Search For Your Location Here">
+						<button type="submit"></button>
+				</form>
+			</div>
+		</div>
+	</form>
+
+	<script>
+		var searchForm = document.getElementById("search-form");
+
+		searchForm.addEventListener("submit", function(event) {
+				event.preventDefault();
+				var searchTerm = document.getElementById("search").value;
+				window.location.href = searchTerm + ".html";
+		});
+	</script>
+
+	
+<div class="reco">
+  <h1>Check these out too!</h1>
+</div>
+
+	
 	<div class="container">
 		<div class="row">
 			<div class="col-6 col-md-3">
@@ -68,6 +99,9 @@
 			</div>
 		</div>
 	</div>
+	<div class="reco">
+		<h1>Places you've visietd recently:</h1>
+	  </div>
 	
 					<title>Simple Map</title>
 					<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
@@ -130,25 +164,6 @@
 
 			
 			  </body>
-
-
-
-	
-			
-
-			
-
-
-
-	<div class="right-nav">
-		<form action="/search" method="get">
-				<input type="text" placeholder="Search">
-				<button type="submit">Search</button>
-		</form>
-		<a href="/en/cart" class="cart-icon">
-				<img src="cart.png" alt="Cart">
-		</a>
-	</div>
 
 	<footer>
 		<div class="container">
