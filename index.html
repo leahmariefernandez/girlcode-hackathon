@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Git Practice</title>
+<title>Aritzia page</title>
 <meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+
 </head>
 <body>
-<div id="app">
-<h1>Aritzia</h1>
-<p>Hackathon, computer science student at UBC.</p>
-<p>These are my favourite courses taken so far:</p>
-<ul>
-<li><b>CPSC 330:</b> Applied Machine Learning</li>
-<li><b>CPSC 436V:</b> Info Visualization</li>
-<li><b>CPSC 455: </b> Applied Industry Practices</li>
-</ul>
-</div>
+	<header>
+		<nav>
+				<div class="logo">
+						<a href="/en/home">
+								<img src="1280px-Aritzia_logo_(2017).svg.png" alt="Aritzia">
+						</a>
+				</div>
+				<ul class="main-nav">
+						<li><a href="/en/women">Women</a></li>
+						<li><a href="/en/men">Men</a></li>
+						<li><a href="/en/new-arrivals">New Arrivals</a></li>
+						<li><a href="/en/sale">Sale</a></li>
+						<li><a href="/en/store-locations">Store Locations</a></li>
+				</ul>
+				<div class="right-nav">
+						<form action="/search" method="get">
+								<input type="text" placeholder="Search">
+								<button type="submit">Search</button>
+						</form>
+						<a href="/en/cart" class="cart-icon">
+								<img src="cart.png" alt="Cart">
+						</a>
+				</div>
+		</nav>
+</header>
+
+
+
+
+
+
+
 <script src="src/index.js"></script>
 </body>
 </html>
