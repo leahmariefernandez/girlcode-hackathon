@@ -143,9 +143,10 @@ button[type=submit] {
 
 .clothing-preview {
 	width: 80%;
-	height: 350px;
+	height: 380px;
   margin: 10px;
   position: relative;
+  object-fit: contain;
     
 }
 
